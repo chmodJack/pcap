@@ -47,6 +47,30 @@ int main(int argc,char* argv[])
 			{
 				coprintf("^g%02u ",arr[i]);
 			}
+			else if(i<(14+(5*4)+2))
+			{
+				coprintf("^r%02u ",arr[i]);
+			}
+			else if(i<(14+(6*4)))
+			{
+				coprintf("^g%02u ",arr[i]);
+			}
+			else if(i<(14+(7*4)))
+			{
+				coprintf("^y%02u ",arr[i]);
+			}
+			else if(i<(14+(8*4)))
+			{
+				coprintf("^b%02u ",arr[i]);
+			}
+			else if(i<(14+(9*4)))
+			{
+				coprintf("^p%02u ",arr[i]);
+			}
+			else if(i<(14+(10*4)))
+			{
+				coprintf("^p%02u ",arr[i]);
+			}
 			else
 				printf("%02x ",arr[i]);
 		}
