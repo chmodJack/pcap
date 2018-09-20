@@ -28,7 +28,7 @@ LDFLAGS+=-lpcap -lpthread -lstdc++ -lm -lc
 .PHONY:all clean
 all:$(TARGET).elf
 	@echo -e '[33m[GO] [32m$<[0m'
-	$(ECHO)./$<
+	$(ECHO) sudo ./$<
 $(TARGET).elf:$(OBJS)
 	@echo -e '[33m[LD] [32m$@[0m'
 	$(ECHO)$(CC) -o $@ $^ $(LDFLAGS)
@@ -38,9 +38,9 @@ $(TARGET).elf:$(OBJS)
 %.o:%.c
 	@echo -e '[33m[CC] [32m$@[0m'
 	$(ECHO)$(CC) -o $@ $^ $(CCFLAGS)
-%.o:%.cpp
+%.o:%.cpp *.hpp
 	@echo -e '[33m[CC] [32m$@[0m'
-	$(ECHO)$(CC) -o $@ $^ $(CCPPFLAGS)
+	$(ECHO)$(CC) -o $@ $< $(CCPPFLAGS)
 clean:
 	@echo -e '[33m[RM] [32m$(TARGET).elf $(OBJS)[0m'
 	$(ECHO)rm -rf $(TARGET).elf $(OBJS)

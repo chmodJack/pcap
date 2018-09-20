@@ -1,7 +1,7 @@
-#include <unistd.h>
-#include <stdarg.h>
-#include <string.h>
-#include "coprintf.h"
+#include<unistd.h>
+#include<stdarg.h>
+#include<string.h>
+#include"coprintf.h"
 
 /* max len of origin format string */
 #define CO_PRINTF_MAX_LEN	1024
